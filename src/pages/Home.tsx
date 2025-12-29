@@ -5,17 +5,17 @@ import Button from '../components/ui/Button';
 import EntityCard from '../components/ui/EntityCard';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code2, Car, HardHat, Rocket, CheckCircle2 } from 'lucide-react';
-import hero1 from '../assets/hero1.JPG';
-import hero2 from '../assets/hero2.JPG';
-import hero3 from '../assets/hero3.JPG';
-import logoGlobal from '../assets/logo/logo LIS GLOBAL.jpeg';
-import logoDev from '../assets/logo/logo LIS DEV.png';
-import logoCarwash from '../assets/logo/logo LIS CARWASH.png';
-import logoRennova from '../assets/logo/logo RENNOVA.jpg';
-import carwashHero from '../assets/carwash/hero carsh wash.jpeg';
-import imgdev from '../assets/imgdev.jpg';
-import carwash1 from '../assets/carwash1.jpeg';
-import renovation from '../assets/RENOVATION.jpg';
+import hero1 from '../assets/hero1.webp';
+import hero2 from '../assets/hero2.webp';
+import hero3 from '../assets/hero3.webp';
+import logoGlobal from '../assets/logo/logo LIS GLOBAL.webp';
+import logoDev from '../assets/logo/logo LIS DEV.webp';
+import logoCarwash from '../assets/logo/logo LIS CARWASH.webp';
+import logoRennova from '../assets/logo/logo RENNOVA.webp';
+import carwashHero from '../assets/carwash/hero carsh wash.webp';
+import imgdev from '../assets/imgdev.webp';
+import carwash1 from '../assets/carwash1.webp';
+import renovation from '../assets/RENOVATION.webp';
 
 const slides = [
     {

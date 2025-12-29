@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logoGlobal from '../../assets/logo/logo LIS GLOBAL.jpeg';
+import logoGlobal from '../../assets/logo/logo LIS GLOBAL.webp';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

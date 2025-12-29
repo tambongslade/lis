@@ -13,22 +13,13 @@ interface EntityCardProps {
     backgroundImage?: string;
 }
 
-const EntityCard = ({ title, description, link, icon, color, delay = 0, backgroundImage }: EntityCardProps) => {
+const EntityCard = ({ title, description, link, color, delay = 0, backgroundImage }: EntityCardProps) => {
     const getColors = () => {
         switch (color) {
             case 'cyan': return 'border-cyan-200 hover:border-cyan-500 group-hover:shadow-cyan-500/20';
             case 'blue': return 'border-sky-200 hover:border-sky-500 group-hover:shadow-sky-500/20';
             case 'amber': return 'border-amber-200 hover:border-amber-500 group-hover:shadow-amber-500/20';
             default: return 'border-indigo-200 hover:border-indigo-500 group-hover:shadow-indigo-500/20';
-        }
-    };
-
-    const getIconBg = () => {
-        switch (color) {
-            case 'cyan': return 'bg-cyan-50 text-cyan-600';
-            case 'blue': return 'bg-sky-50 text-sky-600';
-            case 'amber': return 'bg-amber-50 text-amber-600';
-            default: return 'bg-indigo-50 text-indigo-600';
         }
     };
 

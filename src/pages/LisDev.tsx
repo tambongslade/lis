@@ -5,12 +5,11 @@ import Button from '../components/ui/Button';
 import FAQItem from '../components/ui/FAQ';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code, Smartphone, Globe, Cloud, Check, Cpu } from 'lucide-react';
-import hero2 from '../assets/hero2.JPG';
-import img1 from '../assets/DSC_0300.JPG';
-import img2 from '../assets/DSC_0315.JPG';
-import img3 from '../assets/DSC_0318.JPG';
-import img4 from '../assets/DSC_0322.JPG';
-import logoDev from '../assets/logo/logo LIS DEV.png';
+import hero2 from '../assets/hero2.webp';
+import img1 from '../assets/DSC_0300.webp';
+import img2 from '../assets/DSC_0315.webp';
+import img3 from '../assets/DSC_0318.webp';
+import img4 from '../assets/DSC_0322.webp';
 
 const devSlides = [
     { img: hero2, title: 'Solutions digitales sur mesure', desc: 'Concevez, développez et déployez des solutions informatiques fiables avec LIS DEV.' },

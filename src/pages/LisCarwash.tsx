@@ -5,12 +5,11 @@ import Button from '../components/ui/Button';
 import FAQItem from '../components/ui/FAQ';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Droplets, Sparkles, ShieldCheck, MapPin } from 'lucide-react';
-import carwash1 from '../assets/carwash/hero carsh wash.jpeg';
-import carwash2 from '../assets/carwash/hero car wash 2.jpeg';
-import carwash3 from '../assets/carwash/hero car wash 3.jpeg';
-import carwash4 from '../assets/carwash/hero car wash 4.jpeg';
-import carwash5 from '../assets/carwash/hero car wash 5.jpeg';
-import logoCarwash from '../assets/logo/logo LIS CARWASH.png';
+import carwash1 from '../assets/carwash/hero carsh wash.webp';
+import carwash2 from '../assets/carwash/hero car wash 2.webp';
+import carwash3 from '../assets/carwash/hero car wash 3.webp';
+import carwash4 from '../assets/carwash/hero car wash 4.webp';
+import carwash5 from '../assets/carwash/hero car wash 5.webp';
 
 const carwashSlides = [
     { img: carwash1, title: 'Le lavage automobile nouvelle génération', desc: 'Offrez à votre véhicule un soin professionnel avec LIS Carwash.' },

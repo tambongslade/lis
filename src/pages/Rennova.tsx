@@ -12,7 +12,7 @@ const Rennova = () => {
             <section className="relative py-24 lg:py-32 bg-amber-900 overflow-hidden">
                 <div className="absolute inset-0">
                     <img
-                        src="/src/assets/hero3.JPG"
+                        src="/src/assets/hero3.webp"
                         alt="Rennova Background"
                         className="w-full h-full object-cover opacity-20 grayscale brightness-75"
                     />
