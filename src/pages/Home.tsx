@@ -4,7 +4,9 @@ import Layout from '../components/layout/Layout';
 import Button from '../components/ui/Button';
 import EntityCard from '../components/ui/EntityCard';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, Car, HardHat, Rocket, CheckCircle2 } from 'lucide-react';
+import { Code2, Car, HardHat, Rocket, CheckCircle2, Palette, Smartphone } from 'lucide-react';
+
+// Optimized WebP Assets (from origin)
 import hero1 from '../assets/hero1.webp';
 import hero2 from '../assets/hero2.webp';
 import hero3 from '../assets/hero3.webp';
@@ -12,10 +14,26 @@ import logoGlobal from '../assets/logo/logo LIS GLOBAL.webp';
 import logoDev from '../assets/logo/logo LIS DEV.webp';
 import logoCarwash from '../assets/logo/logo LIS CARWASH.webp';
 import logoRennova from '../assets/logo/logo RENNOVA.webp';
-import carwashHero from '../assets/carwash/hero carsh wash.webp';
+import carwashHero from '../assets/carwash/hero carsh wash.webp'; // Check filename carefully? 'hero carsh wash.webp'
 import imgdev from '../assets/imgdev.webp';
 import carwash1 from '../assets/carwash1.webp';
 import renovation from '../assets/RENOVATION.webp';
+
+// Alias renovation (which is the WebP hero) to renovaCard for existing usage
+const renovaCard = renovation;
+
+// New Assets (JPG/PNG)
+import lisCourse from '../assets/lis course.jpg';
+import lisCreativeHeader from '../assets/lis creative header.jpeg';
+import lisCreativeEntity from '../assets/entity creative.jpeg';
+import logoLisCreative from '../assets/logo/logo LIS CREA.png';
+import logoLisApp from '../assets/logo/logo LIS APP.jpeg';
+
+// Aliases for compatibility with recent code
+const logoLisDev = logoDev;
+const logoLisCarwash = logoCarwash;
+const logoRennovaCard = logoRennova;
+const logoLisGlobalCard = logoGlobal;
 
 const slides = [
     {
@@ -40,11 +58,32 @@ const slides = [
         desc: 'Prenez soin de votre véhicule avec nos services de lavage et detailing haute qualité.'
     },
     {
-        img: hero3,
+        img: renovaCard,
         logo: logoRennova,
         sub: 'RENNOVA',
         title: 'Rénovation & Nettoyage',
         desc: 'Remise à neuf, nettoyage fin de chantier et entretien professionnel de vos espaces.'
+    },
+    {
+        img: lisCourse,
+        logo: logoGlobal,
+        sub: 'LIS COURSES',
+        title: 'Livraison & Logistique',
+        desc: 'Gagnez du temps, boostez vos affaires. Un service de livraison à domicile efficace et sûr.'
+    },
+    {
+        img: lisCreativeHeader,
+        logo: logoGlobal,
+        sub: 'LIS CREATIVE',
+        title: 'Création Digitale',
+        desc: 'Donnez vie à vos idées. Conception de logos, visuels, teasers et animations pour sublimer votre image de marque.'
+    },
+    {
+        img: hero3,
+        logo: logoGlobal,
+        sub: 'LIS APP',
+        title: 'Application Mobile',
+        desc: 'Accédez à tous nos services en un clic. Téléchargez notre application pour une expérience fluide et centralisée.'
     }
 ];
 
@@ -54,7 +93,7 @@ const Home = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 5000);
+        }, 10000);
         return () => clearInterval(timer);
     }, []);
     return (
@@ -110,7 +149,7 @@ const Home = () => {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button size="lg" className="!bg-[#125777] !text-white hover:!bg-[#207d92] shadow-xl" onClick={() => document.getElementById('entities')?.scrollIntoView({ behavior: 'smooth' })}>
+                                <Button size="lg" className="!bg-[#125777] !text-white hover:!bg-sky-500 shadow-xl" onClick={() => document.getElementById('entities')?.scrollIntoView({ behavior: 'smooth' })}>
                                     Découvrir nos services
                                 </Button>
                                 <Button variant="outline" size="lg" className="!text-white !border-white hover:!bg-white/20 backdrop-blur-sm">
@@ -175,7 +214,7 @@ const Home = () => {
                         <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2">Un Groupe, Plusieurs Expertises</h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
                         <EntityCard
                             title="LIS DEV"
                             description="Technologie & Solutions Digitales. Logiciels, sites web et applications sur mesure."
@@ -184,6 +223,7 @@ const Home = () => {
                             icon={<Code2 className="w-8 h-8" />}
                             delay={0.1}
                             backgroundImage={imgdev}
+                            logo={logoLisDev}
                         />
                         <EntityCard
                             title="LIS CARWASH"
@@ -193,6 +233,7 @@ const Home = () => {
                             icon={<Car className="w-8 h-8" />}
                             delay={0.2}
                             backgroundImage={carwash1}
+                            logo={logoLisCarwash}
                         />
                         <EntityCard
                             title="RENNOVA"
@@ -201,7 +242,38 @@ const Home = () => {
                             color="amber"
                             icon={<HardHat className="w-8 h-8" />}
                             delay={0.3}
-                            backgroundImage={renovation}
+                            backgroundImage={renovaCard}
+                            logo={logoRennovaCard}
+                        />
+                        <EntityCard
+                            title="LIS COURSES"
+                            description="Service de courses et livraison à domicile. Rapide, fiable et sécurisé."
+                            link="https://www.courses.lis.cm/"
+                            color="blue"
+                            icon={<Rocket className="w-8 h-8" />}
+                            delay={0.4}
+                            backgroundImage={lisCourse}
+                            logo={logoLisGlobalCard}
+                        />
+                        <EntityCard
+                            title="LIS CREATIVE"
+                            description="Studio de design et création numérique. Identité visuelle, logos et supports marketing."
+                            link="https://creative.lis.cm/"
+                            color="purple"
+                            icon={<Palette className="w-8 h-8" />}
+                            delay={0.5}
+                            backgroundImage={lisCreativeEntity}
+                            logo={logoLisCreative}
+                        />
+                        <EntityCard
+                            title="LIS APP"
+                            description="Toute l'expérience LIS dans votre poche. Commandez, réservez et suivez vos services."
+                            link="https://app.lis.cm/"
+                            color="emerald"
+                            icon={<Smartphone className="w-8 h-8" />}
+                            delay={0.6}
+                            backgroundImage={hero3}
+                            logo={logoLisApp}
                         />
                     </div>
                 </div>

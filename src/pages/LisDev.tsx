@@ -86,7 +86,7 @@ const LisDev = () => {
                                 {devSlides[currentSlide].desc}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button variant="primary" className="!bg-[#3bbec7] hover:!bg-[#207d92] text-white !shadow-[#3bbec7]/30">Demander un devis</Button>
+                                <Button variant="primary" className="!bg-[#3bbec7] hover:!bg-sky-500 text-white !shadow-[#3bbec7]/30">Demander un devis</Button>
                                 <Button variant="outline" className="!border-white/40 !text-white hover:!bg-white/20 backdrop-blur-sm">Parler à un expert</Button>
                             </div>
                         </motion.div>
@@ -311,7 +311,7 @@ const LisDev = () => {
                     <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                         Contactez LIS DEV et construisons ensemble une solution qui fait la différence.
                     </p>
-                    <Button size="lg" className="!bg-[#125777] !text-white hover:!bg-[#0e435b]">Lancer mon projet</Button>
+                    <Button size="lg" className="!bg-[#125777] !text-white hover:!bg-sky-500">Lancer mon projet</Button>
                 </div>
             </section>
 

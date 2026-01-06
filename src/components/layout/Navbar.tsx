@@ -22,9 +22,9 @@ const Navbar = () => {
         const isTransparent = location.pathname === '/' && !isScrolled;
 
         if (location.pathname === path) {
-            if (path === '/lis-dev') return 'text-cyan-400 font-semibold';
+            if (path === '/lis-dev') return 'text-sky-400 font-semibold';
             if (path === '/lis-carwash') return 'text-sky-400 font-semibold';
-            if (path === '/rennova') return 'text-amber-400 font-semibold';
+            if (path === '/rennova') return 'text-sky-400 font-semibold';
             return 'text-blue-400 font-semibold';
         }
         return isTransparent ? 'text-white/90 hover:text-white' : 'text-gray-300 hover:text-white';
@@ -42,7 +42,7 @@ const Navbar = () => {
     const navbarBg = isHome && !isScrolled ? 'bg-transparent border-transparent' : 'bg-gradient-to-r from-[#125777] via-[#207d92] to-[#125777] backdrop-blur-md border-b border-white/10 shadow-lg';
 
     // Adjust text color for transparent header on home hero (white text)
-    const logoColor = isHome && !isScrolled ? 'text-white' : 'bg-gradient-to-r from-blue-400 to-indigo-600 bg-clip-text text-transparent';
+    const logoColor = isHome && !isScrolled ? 'text-white' : 'text-white';
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${navbarBg}`}>
@@ -52,13 +52,13 @@ const Navbar = () => {
                         <img
                             src={logoGlobal}
                             alt="LIS Group Logo"
-                            className="h-10 w-auto rounded-md object-contain"
+                            className="h-10 w-auto rounded-full object-contain"
                         />
                         <div className="flex flex-col">
-                            <span className={`text-xl font-bold ${logoColor} group-hover:text-cyan-400 transition-all duration-300 leading-none`}>
-                                LIS
+                            <span className={`text-lg font-bold ${logoColor} group-hover:text-cyan-400 transition-all duration-300 leading-none`}>
+                                LIS SARL
                             </span>
-                            <span className="text-xs text-gray-400 group-hover:text-white transition-colors leading-none tracking-wider">GROUP</span>
+                            <span className="text-xs text-gray-400 group-hover:text-white transition-colors leading-none tracking-wider"></span>
                         </div>
                     </Link>
 

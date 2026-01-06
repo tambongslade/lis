@@ -233,7 +233,7 @@ const Contact = () => {
                                 <Button
                                     type="submit"
                                     size="lg"
-                                    className="w-full !bg-[#125777] hover:!bg-[#207d92] !text-white flex items-center justify-center gap-2"
+                                    className="w-full !bg-[#125777] hover:!bg-sky-500 !text-white flex items-center justify-center gap-2"
                                 >
                                     <Send className="w-5 h-5" />
                                     Envoyer le message

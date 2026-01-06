@@ -173,7 +173,7 @@ const LisCarwash = () => {
                     <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                         Passez dès aujourd’hui chez LIS Carwash pour un lavage de qualité professionnelle.
                     </p>
-                    <Button size="lg" className="!bg-[#125777] !text-white hover:!bg-[#0e435b]">Voir l'itinéraire</Button>
+                    <Button size="lg" className="!bg-[#125777] !text-white hover:!bg-sky-500">Voir l'itinéraire</Button>
                 </div>
             </section>
 

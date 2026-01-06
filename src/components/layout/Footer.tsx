@@ -59,9 +59,27 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="/rennova" className="hover:text-amber-400 transition-colors flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                                <a href="/rennova" className="hover:text-sky-400 transition-colors flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
                                     RENNOVA
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.courses.lis.cm/" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                                    LIS COURSES
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://creative.lis.cm/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                                    LIS CREATIVE
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://app.lis.cm/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                    LIS APP
                                 </a>
                             </li>
                             <li>
