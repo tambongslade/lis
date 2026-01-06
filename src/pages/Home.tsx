@@ -4,7 +4,7 @@ import Layout from '../components/layout/Layout';
 import Button from '../components/ui/Button';
 import EntityCard from '../components/ui/EntityCard';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, Car, HardHat, Rocket, CheckCircle2, Palette, Smartphone } from 'lucide-react';
+import { Rocket, CheckCircle2 } from 'lucide-react';
 
 // Optimized WebP Assets (from origin)
 import hero1 from '../assets/hero1.webp';
@@ -26,14 +26,15 @@ const renovaCard = renovation;
 import lisCourse from '../assets/lis course.jpg';
 import lisCreativeHeader from '../assets/lis creative header.jpeg';
 import lisCreativeEntity from '../assets/entity creative.jpeg';
-import logoLisCreative from '../assets/logo/logo LIS CREA.png';
-import logoLisApp from '../assets/logo/logo LIS APP.jpeg';
 
 // Aliases for compatibility with recent code
 const logoLisDev = logoDev;
 const logoLisCarwash = logoCarwash;
 const logoRennovaCard = logoRennova;
 const logoLisGlobalCard = logoGlobal;
+// Fallback for missing logos
+const logoLisCreative = logoGlobal;
+const logoLisApp = logoGlobal;
 
 const slides = [
     {
@@ -220,7 +221,6 @@ const Home = () => {
                             description="Technologie & Solutions Digitales. Logiciels, sites web et applications sur mesure."
                             link="/lis-dev"
                             color="cyan"
-                            icon={<Code2 className="w-8 h-8" />}
                             delay={0.1}
                             backgroundImage={imgdev}
                             logo={logoLisDev}
@@ -230,7 +230,6 @@ const Home = () => {
                             description="Services Automobiles premium. Lavage haute qualité et detailing professionnel."
                             link="/lis-carwash"
                             color="blue"
-                            icon={<Car className="w-8 h-8" />}
                             delay={0.2}
                             backgroundImage={carwash1}
                             logo={logoLisCarwash}
@@ -240,7 +239,6 @@ const Home = () => {
                             description="Nettoyage Pro & Rénovation. Remise à neuf de bâtiments et espaces commerciaux."
                             link="/rennova"
                             color="amber"
-                            icon={<HardHat className="w-8 h-8" />}
                             delay={0.3}
                             backgroundImage={renovaCard}
                             logo={logoRennovaCard}
@@ -250,7 +248,6 @@ const Home = () => {
                             description="Service de courses et livraison à domicile. Rapide, fiable et sécurisé."
                             link="https://www.courses.lis.cm/"
                             color="blue"
-                            icon={<Rocket className="w-8 h-8" />}
                             delay={0.4}
                             backgroundImage={lisCourse}
                             logo={logoLisGlobalCard}
@@ -260,7 +257,6 @@ const Home = () => {
                             description="Studio de design et création numérique. Identité visuelle, logos et supports marketing."
                             link="https://creative.lis.cm/"
                             color="purple"
-                            icon={<Palette className="w-8 h-8" />}
                             delay={0.5}
                             backgroundImage={lisCreativeEntity}
                             logo={logoLisCreative}
@@ -270,7 +266,6 @@ const Home = () => {
                             description="Toute l'expérience LIS dans votre poche. Commandez, réservez et suivez vos services."
                             link="https://app.lis.cm/"
                             color="emerald"
-                            icon={<Smartphone className="w-8 h-8" />}
                             delay={0.6}
                             backgroundImage={hero3}
                             logo={logoLisApp}

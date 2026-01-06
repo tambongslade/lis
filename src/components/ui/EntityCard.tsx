@@ -7,14 +7,13 @@ interface EntityCardProps {
     title: string;
     description: string;
     link: string;
-    icon: React.ReactNode;
     color: 'blue' | 'cyan' | 'amber' | 'purple' | 'emerald';
     delay?: number;
     backgroundImage?: string;
     logo?: string;
 }
 
-const EntityCard = ({ title, description, link, icon, color, delay = 0, backgroundImage, logo }: EntityCardProps) => {
+const EntityCard = ({ title, description, link, color, delay = 0, backgroundImage, logo }: EntityCardProps) => {
     const getColors = () => {
         switch (color) {
             case 'cyan': return 'border-cyan-200 hover:border-cyan-500 group-hover:shadow-cyan-500/20';
@@ -23,17 +22,6 @@ const EntityCard = ({ title, description, link, icon, color, delay = 0, backgrou
             case 'purple': return 'border-purple-200 hover:border-purple-500 group-hover:shadow-purple-500/20';
             case 'emerald': return 'border-emerald-200 hover:border-emerald-500 group-hover:shadow-emerald-500/20';
             default: return 'border-indigo-200 hover:border-indigo-500 group-hover:shadow-indigo-500/20';
-        }
-    };
-
-    const getIconBg = () => {
-        switch (color) {
-            case 'cyan': return 'bg-cyan-50 text-cyan-600';
-            case 'blue': return 'bg-sky-50 text-sky-600';
-            case 'amber': return 'bg-amber-50 text-amber-600';
-            case 'purple': return 'bg-purple-50 text-purple-600';
-            case 'emerald': return 'bg-emerald-50 text-emerald-600';
-            default: return 'bg-indigo-50 text-indigo-600';
         }
     };
     return (
