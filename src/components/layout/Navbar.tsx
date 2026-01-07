@@ -12,9 +12,12 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Home', path: '/' },
+        { name: 'LIS APP', path: 'https://app.lis.cm/', external: true },
         { name: 'LIS DEV', path: '/lis-dev' },
         { name: 'LIS CARWASH', path: '/lis-carwash' },
         { name: 'RENNOVA', path: '/rennova' },
+        { name: 'LIS COURSES', path: 'https://www.courses.lis.cm/', external: true },
+        { name: 'LIS CREATIVE', path: 'https://creative.lis.cm/', external: true },
         { name: 'Contact', path: '/contact' },
     ];
 
@@ -62,21 +65,33 @@ const Navbar = () => {
                         </div>
                     </Link>
 
-                    <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-8">
+                    <div className="hidden lg:block">
+                        <div className="ml-10 flex items-baseline space-x-6">
                             {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    to={link.path}
-                                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${getLinkColor(link.path)}`}
-                                >
-                                    {link.name}
-                                </Link>
+                                link.external ? (
+                                    <a
+                                        key={link.name}
+                                        href={link.path}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${getLinkColor(link.path)}`}
+                                    >
+                                        {link.name}
+                                    </a>
+                                ) : (
+                                    <Link
+                                        key={link.name}
+                                        to={link.path}
+                                        className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${getLinkColor(link.path)}`}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                )
                             ))}
                         </div>
                     </div>
 
-                    <div className="-mr-2 flex md:hidden">
+                    <div className="-mr-2 flex lg:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
@@ -93,19 +108,33 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-[#125777] border-b border-white/10"
+                        className="lg:hidden bg-[#125777] border-b border-white/10"
                     >
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    to={link.path}
-                                    onClick={() => setIsOpen(false)}
-                                    className={`flex items-center justify-between px-3 py-4 rounded-md text-base font-medium ${getLinkColor(link.path)}`}
-                                >
-                                    {link.name}
-                                    <ChevronRight className="h-4 w-4 opacity-50" />
-                                </Link>
+                                link.external ? (
+                                    <a
+                                        key={link.name}
+                                        href={link.path}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => setIsOpen(false)}
+                                        className={`flex items-center justify-between px-3 py-4 rounded-md text-base font-medium ${getLinkColor(link.path)}`}
+                                    >
+                                        {link.name}
+                                        <ChevronRight className="h-4 w-4 opacity-50" />
+                                    </a>
+                                ) : (
+                                    <Link
+                                        key={link.name}
+                                        to={link.path}
+                                        onClick={() => setIsOpen(false)}
+                                        className={`flex items-center justify-between px-3 py-4 rounded-md text-base font-medium ${getLinkColor(link.path)}`}
+                                    >
+                                        {link.name}
+                                        <ChevronRight className="h-4 w-4 opacity-50" />
+                                    </Link>
+                                )
                             ))}
                         </div>
                     </motion.div>
