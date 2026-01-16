@@ -59,7 +59,7 @@ const Navbar = () => {
                         />
                         <div className="flex flex-col">
                             <span className={`text-lg font-bold ${logoColor} group-hover:text-cyan-400 transition-all duration-300 leading-none`}>
-                                LIS SARL
+                                LIS Holding
                             </span>
                             <span className="text-xs text-gray-400 group-hover:text-white transition-colors leading-none tracking-wider"></span>
                         </div>
