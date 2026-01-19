@@ -27,6 +27,8 @@ import lisCourse from '../assets/lis course.jpg';
 import lisCreativeHeader from '../assets/lis creative header.jpeg';
 import lisCreativeEntity from '../assets/entity creative.jpeg';
 
+import lisSmsHero from '../assets/lis_sms_hero.png';
+
 // Aliases for compatibility with recent code
 const logoLisDev = logoDev;
 const logoLisCarwash = logoCarwash;
@@ -35,6 +37,7 @@ const logoLisGlobalCard = logoGlobal;
 // Fallback for missing logos
 const logoLisCreative = logoGlobal;
 const logoLisApp = logoGlobal;
+const logoLisSms = logoGlobal;
 
 const slides = [
     {
@@ -50,6 +53,13 @@ const slides = [
         sub: 'LIS DEV',
         title: 'Innovation Digitale',
         desc: 'Développement de logiciels sur mesure, sites web performants et applications mobiles intuitives.'
+    },
+    {
+        img: lisSmsHero,
+        logo: logoGlobal,
+        sub: 'LIS BULK SMS',
+        title: 'Marketing SMS & Communication',
+        desc: 'Atteignez vos clients instantanément avec nos solutions de SMS en masse fiables et ciblées.'
     },
     {
         img: carwashHero,
@@ -179,28 +189,28 @@ const Home = () => {
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">À propos de LIS</h2>
                         <p className="text-gray-600 max-w-3xl mx-auto">
-                            Life Is Simple (LIS) est un groupe organisé autour d’entités complémentaires, opérant dans des domaines stratégiques. Notre exigence de qualité nous permet d’offrir des services efficaces et durables.
+                            Life Is Simple (LIS) est un groupe organisé autour d'entités complémentaires, opérant dans des domaines stratégiques. Notre exigence de qualité nous permet d'offrir des services efficaces et durables.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { title: "Expertise Ciblée", desc: "Chaque entité dispose de spécialistes qualifiés.", icon: <CheckCircle2 className="w-6 h-6 text-primary" /> },
-                            { title: "Qualité Supérieure", desc: "Équipements modernes et standards élevés.", icon: <Rocket className="w-6 h-6 text-primary" /> },
-                            { title: "Vision Cohérente", desc: "Une seule mission : simplifier votre quotidien.", icon: <CheckCircle2 className="w-6 h-6 text-primary" /> }
+                            { title: "Expertise Ciblée", desc: "Chaque entité dispose de spécialistes qualifiés.", icon: <CheckCircle2 className="w-6 h-6 text-white" /> },
+                            { title: "Qualité Supérieure", desc: "Équipements modernes et standards élevés.", icon: <Rocket className="w-6 h-6 text-white" /> },
+                            { title: "Vision Cohérente", desc: "Une seule mission : simplifier votre quotidien.", icon: <CheckCircle2 className="w-6 h-6 text-white" /> }
                         ].map((item, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
-                                className="flex flex-col items-center text-center p-6 rounded-xl bg-white border border-gray-100 shadow-lg shadow-gray-200/50"
+                                className="flex flex-col items-center text-center p-6 rounded-xl bg-primary border border-primary-light shadow-lg shadow-primary/20"
                             >
-                                <div className="mb-4 p-3 rounded-full bg-primary/10">
+                                <div className="mb-4 p-3 rounded-full bg-white/20">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-                                <p className="text-gray-600 text-sm">{item.desc}</p>
+                                <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                                <p className="text-white/90 text-sm">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -224,6 +234,15 @@ const Home = () => {
                             delay={0.1}
                             backgroundImage={imgdev}
                             logo={logoLisDev}
+                        />
+                        <EntityCard
+                            title="LIS BULK SMS"
+                            description="Communication de masse & Marketing SMS. Campagnes ciblées, rapides et efficaces."
+                            link="https://bulksms.lis.cm/"
+                            color="indigo"
+                            delay={0.15}
+                            backgroundImage={lisSmsHero}
+                            logo={logoLisSms}
                         />
                         <EntityCard
                             title="LIS CARWASH"

@@ -1,25 +1,62 @@
 
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
+import googlePlayBadge from '../../assets/google-play-badge.png';
+import appStoreBadge from '../../assets/app-store-badge.png';
+import footerBg from '../../assets/lis-footer-bg.png';
+
 const Footer = () => {
     return (
-        <footer className="bg-[#125777] text-gray-300 border-t border-white/10 py-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <footer className="relative bg-[#125777] text-gray-300 border-t border-white/10 py-12 overflow-hidden">
+            <div
+                className="absolute inset-0 z-0 opacity-20 pointer-events-none"
+                style={{
+                    backgroundImage: `url(${footerBg})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            ></div>
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
                     {/* Brand */}
-                    <div className="space-y-4">
-                        <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-600 bg-clip-text text-transparent">
-                            LIS
-                        </h3>
-                        <p className="text-sm leading-relaxed max-w-xs">
-                            Simplifier la vie grâce à des solutions intelligentes.
-                            Un groupe. Plusieurs entités. Une seule vision.
-                        </p>
-                        <div className="flex space-x-4 pt-2">
-                            <a href="#" className="hover:text-blue-400 transition-colors"><Facebook size={20} /></a>
-                            <a href="#" className="hover:text-pink-400 transition-colors"><Instagram size={20} /></a>
-                            <a href="#" className="hover:text-blue-600 transition-colors"><Linkedin size={20} /></a>
+                    <div className="space-y-6">
+                        <div className="space-y-4">
+                            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-600 bg-clip-text text-transparent">
+                                LIS
+                            </h3>
+                            <p className="text-sm leading-relaxed max-w-xs">
+                                Simplifier la vie grâce à des solutions intelligentes.
+                                Un groupe. Plusieurs entités. Une seule vision.
+                            </p>
+                            <div className="flex space-x-4 pt-2">
+                                <a href="#" className="hover:text-blue-400 transition-colors"><Facebook size={20} /></a>
+                                <a href="#" className="hover:text-pink-400 transition-colors"><Instagram size={20} /></a>
+                                <a href="#" className="hover:text-blue-600 transition-colors"><Linkedin size={20} /></a>
+                            </div>
+                        </div>
+
+                        {/* App Downloads */}
+                        <div className="space-y-3">
+                            <h4 className="text-white font-semibold text-sm">Télécharger l'application</h4>
+                            <div className="flex flex-wrap gap-3">
+                                <a
+                                    href="https://play.google.com/store/apps/details?id=cm.lis&pcampaignid=web_share"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block transition-transform hover:scale-105"
+                                >
+                                    <img src={googlePlayBadge} alt="Disponible sur Google Play" className="h-10 w-auto" />
+                                </a>
+                                <a
+                                    href="https://apps.apple.com/app/lifes-simple/id6748126220"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block transition-transform hover:scale-105"
+                                >
+                                    <img src={appStoreBadge} alt="Télécharger dans l'App Store" className="h-10 w-auto" />
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -50,6 +87,12 @@ const Footer = () => {
                                 <a href="/lis-dev" className="hover:text-cyan-400 transition-colors flex items-center gap-2">
                                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
                                     LIS DEV
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://bulksms.lis.cm/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                                    LIS BULK SMS
                                 </a>
                             </li>
                             <li>

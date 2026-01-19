@@ -7,7 +7,7 @@ interface EntityCardProps {
     title: string;
     description: string;
     link: string;
-    color: 'blue' | 'cyan' | 'amber' | 'purple' | 'emerald';
+    color: 'blue' | 'cyan' | 'amber' | 'purple' | 'emerald' | 'indigo';
     delay?: number;
     backgroundImage?: string;
     logo?: string;
@@ -21,6 +21,7 @@ const EntityCard = ({ title, description, link, color, delay = 0, backgroundImag
             case 'amber': return 'border-amber-200 hover:border-amber-500 group-hover:shadow-amber-500/20';
             case 'purple': return 'border-purple-200 hover:border-purple-500 group-hover:shadow-purple-500/20';
             case 'emerald': return 'border-emerald-200 hover:border-emerald-500 group-hover:shadow-emerald-500/20';
+            case 'indigo': return 'border-indigo-200 hover:border-indigo-500 group-hover:shadow-indigo-500/20';
             default: return 'border-indigo-200 hover:border-indigo-500 group-hover:shadow-indigo-500/20';
         }
     };
